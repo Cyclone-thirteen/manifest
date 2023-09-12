@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="cyclone"
+          fetch="https://github.com/Cyclone-thirteen"
+          revision="thirteen" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com" />
+
+  <remote name="cyclone-gitlab"
+          fetch="https://gitlab.com/CYCLONE-AOSP"
+          revision="thirteen" />
+
+  <!-- Cyclone Repos -->
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="cyclone" />
+  <project path="frameworks/base" name="frameworks_base" remote="cyclone" />
+  <project path="frameworks/native" name="frameworks_native" remote="cyclone" />
+
+  <!-- General repos -->
+  <project path="bionic" name="bionic" remote="cyclone" />
+  <project path="build/soong" name="build_soong" remote="cyclone" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="cyclone" />
+  <project path="packages/apps/Cyclone" name="packages_apps_Cyclone" remote="cyclone" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="cyclone" />
+
+  <!-- System repos -->
+  <project path="system/core" name="system_core" remote="cyclone" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="cyclone" />
+
+  <!-- Vendor repos -->
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="cyclone" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="cyclone" />
+  <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="cyclone" />
+  <project path="vendor/support" name="vendor_support" remote="cyclone" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="cyclone" />
+  <project path="vendor/overlays/Elegance" name="vendor_overlays_Elegance" remote="cyclone" />
+  <project path="vendor/PixelLauncherExtended" name="vendor_PixelLauncherExtended" remote="cyclone" />
+
+</manifest>
